@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  publish = "."
+  functions = "netlify/functions"
+  command = "echo 'OpenIB Forge running with Netlify Dev'"
